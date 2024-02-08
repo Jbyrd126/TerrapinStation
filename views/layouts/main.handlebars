@@ -2,20 +2,32 @@
   <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>Wharf Rats</title>
   </head>
 
   <body>
-    <h1>Grateful Dead</h1>
+      <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center">Wharf Rats</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="sass.html">Sign Up</a></li>
+        <li><a href="badges.html">Login</a></li>
+       
+        
+      </ul>
+    </div>
+  </nav>
+        
 
     <!-- feature discovery test -->
-    <a id='menu' class='waves-effect waves-light btn btn-floating'><i
+    <a id='menu' class=' turts waves-effect waves-light  btn btn-floating'><i
         class='material-icons'
-      ></i></a>
+      >search</i></a>
     <!-- Tap Target Structure -->
-    <div class='tap-target' data-target='menu'>
+    <div class='tap-target'  data-target='menu' >
       <div
         class='tap-target-content'
         style='
@@ -24,16 +36,15 @@
             flex-direction: column;
             align-items: center;
             width: 150px !important;
+            
           '
       >
         <form id='featureForm'>
           <div class='input-field col s12' style='margin-bottom: 10px'>
-            <p id='menu' class='waves-effect waves-light btn btn-floating'><i
-                class='material-icons'
-              >Search By City</i></p>
+          
 
             <input id='input1' type='text' class='validate' />
-            <label for='input1'></label>
+            <label for='input1'>Enter A Venue Here</label>
             <button
               class='btn waves-effect waves-light submit-button'
               type='submit'

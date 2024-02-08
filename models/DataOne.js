@@ -11,6 +11,16 @@ DataOne.init(
       primaryKey: true,
       autoIncrement: true,
     },
+
+    versionId: {
+      type: DataTypes.STRING,
+    },
+
+    eventDate: { type: DataTypes.DATEONLY },
+    lastUpdated: { type: DataTypes.DATE },
+    info: DataTypes.TEXT,
+    url: DataTypes.STRING,
+
     // Add any new columns to the DataOne model here
   },
   {

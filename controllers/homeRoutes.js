@@ -8,6 +8,7 @@ const router = require('express').Router();
 router.get('/', async (req, res) => {
   console.log('Landing page attempting to be retrieved');
   try {
+    res.render('home')
   } catch (err) {
     console.log('There was an error retrieving landing page');
     res.status(500).json(err);

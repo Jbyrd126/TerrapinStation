@@ -1,24 +1,123 @@
-{{! Your main layout will go here }}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title >Wharfrats</title>
-     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-    {{!-- heder goes here --}}
-    <header class="bg-stone-500 h-32 text-5xl ">
-        Grateful Dead
-    </header>
-    <main>
-        {{!-- views get populated here --}}
-        {{{body}}}
-    </main>
-    {{!-- footer here --}}
-    <footer class="bg-green-300 h-32 text-4xl">
-        footer here
-    </footer>
-</body>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Wharf Rats</title>
+  </head>
+
+  <body>
+    <h1>Grateful Dead</h1>
+
+    <!-- feature discovery test -->
+    <a id='menu' class='waves-effect waves-light btn btn-floating'><i
+        class='material-icons'
+      ></i></a>
+    <!-- Tap Target Structure -->
+    <div class='tap-target' data-target='menu'>
+      <div
+        class='tap-target-content'
+        style='
+            inset: 0px 0px 0px 384px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 150px !important;
+          '
+      >
+        <form id='featureForm'>
+          <div class='input-field col s12' style='margin-bottom: 10px'>
+            <p id='menu' class='waves-effect waves-light btn btn-floating'><i
+                class='material-icons'
+              >Search By City</i></p>
+
+            <input id='input1' type='text' class='validate' />
+            <label for='input1'></label>
+            <button
+              class='btn waves-effect waves-light submit-button'
+              type='submit'
+              name='action'
+              style='margin-top: 10px'
+            >
+              Submit
+            </button>
+          </div>
+          <div class='input-field col s12' style='margin-bottom: 10px'>
+            <p id='menu' class='waves-effect waves-light btn btn-floating'><i
+                class='material-icons'
+              >Search By State</p>
+            <input id='input2' type='text' class='validate' />
+            <label for='input2'></label>
+            <button
+              class='btn waves-effect waves-light submit-button'
+              type='submit'
+              name='action'
+              style='margin-top: 10px'
+            >
+              Submit
+            </button>
+          </div>
+          <div class='input-field col s12' style='margin-bottom: 10px'>
+            <p id='menu' class='waves-effect waves-light btn btn-floating'><i
+                class='material-icons'
+              >Search For Songs</p>
+            <input id='input3' type='text' class='validate' />
+            <label for='input3'></label>
+            <button
+              class='btn waves-effect waves-light submit-button'
+              type='submit'
+              name='action'
+              style='margin-top: 10px'
+            >
+              Submit
+            </button>
+          </div>
+          <div class='input-field col s12' style='margin-bottom: 10px'>
+              <p id='menu' class='waves-effect waves-light btn btn-floating'><i
+                class='material-icons'
+              >Search By Show</p>
+            <input id='input4' type='text' class='validate' />
+            <label for='input4'></label>
+            <button
+              class='btn waves-effect waves-light submit-button'
+              type='submit'
+              name='action'
+              style='margin-top: 10px'
+            >
+              Submit
+            </button>
+          </div>
+          <div class='input-field col s12' style='margin-bottom: 10px'>
+          <p  id='menu' class='waves-effect waves-light btn btn-floating'><i
+                class='material-icons'
+              >Add Show</p>
+            <input id='input5' type='text' class='validate' />
+            <label for='input5'></label>
+            <button
+              class='btn waves-effect waves-light submit-button'
+              type='submit'
+              name='action'
+              style='margin-top: 10px'
+            >
+              Submit
+            </button>
+          </div>
+          <div class='input-field col s12' style='margin-bottom: 10px'>
+            <p  id='menu' class='waves-effect waves-light btn btn-floating'><i
+                class='material-icons'
+              >Update Show</p>
+            <input id='input6' type='text' class='validate' />
+            <label for='input6'></label>
+            <button
+              class='btn waves-effect waves-light submit-button'
+              type='submit'
+              name='action'
+              style='margin-top: 10px'
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>

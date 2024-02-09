@@ -51,7 +51,7 @@ Set.init(
       type: DataTypes.STRING,
     },
     
-    eventDate: { type: DataTypes.DATEONLY },
+    eventDate: { type: DataTypes.DATE },
     lastUpdated: { type: DataTypes.DATE },
     info: DataTypes.TEXT,
     url: DataTypes.STRING,

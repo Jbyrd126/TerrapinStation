@@ -1,8 +1,10 @@
 const sequelize = require('../config/connection');
-
+const { User, Project } = require('../models');
 // import any models you want to seed here
 
 // import any data you want to seed here
+const userData = require('./userData.json');
+const projectData = require('./projectData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -10,6 +12,12 @@ const seedDatabase = async () => {
 
   // bulkCreate your users here
   // hint- use your activities!
+  
+  const users = await User.bulkCreate(userData, {
+    individualHooks: true,
+    returning: true,
+  });
+
 
   console.log('Users created');
 

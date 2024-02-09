@@ -1,11 +1,15 @@
 <html lang='en'>
   <head>
+     <link href="/public/css/reset.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>Wharf Rats</title>
+
+    
+
   </head>
 
   <body>
@@ -23,9 +27,7 @@
         
 
     <!-- feature discovery test -->
-    <a id='menu' class=' turts waves-effect waves-light  btn btn-floating'><i
-        class='material-icons'
-      >search</i></a>
+    <a id='menu' class=' turts waves-effect waves-light  btn btn-floating '><img id="star" src="/images/grateful-dead-logo.svg" alt="gratefulDeadLogo"></a>
     <!-- Tap Target Structure -->
     <div class='tap-target'  data-target='menu' >
       <div
@@ -45,14 +47,14 @@
 
             <input id='input1' type='text' class='validate' />
             <label for='input1'>Enter A Venue Here</label>
-            <button
+            {{!-- <button
               class='btn waves-effect waves-light submit-button'
               type='submit'
               name='action'
               style='margin-top: 10px'
             >
               Submit
-            </button>
+            </button> --}}
           </div>
           <div class='input-field col s12' style='margin-bottom: 10px'>
             <p id='menu' class='waves-effect waves-light btn btn-floating'><i
@@ -60,14 +62,14 @@
               >Search By State</p>
             <input id='input2' type='text' class='validate' />
             <label for='input2'></label>
-            <button
+            {{!-- <button
               class='btn waves-effect waves-light submit-button'
               type='submit'
               name='action'
               style='margin-top: 10px'
             >
               Submit
-            </button>
+            </button> --}}
           </div>
           <div class='input-field col s12' style='margin-bottom: 10px'>
             <p id='menu' class='waves-effect waves-light btn btn-floating'><i
@@ -75,14 +77,7 @@
               >Search For Songs</p>
             <input id='input3' type='text' class='validate' />
             <label for='input3'></label>
-            <button
-              class='btn waves-effect waves-light submit-button'
-              type='submit'
-              name='action'
-              style='margin-top: 10px'
-            >
-              Submit
-            </button>
+          
           </div>
           <div class='input-field col s12' style='margin-bottom: 10px'>
               <p id='menu' class='waves-effect waves-light btn btn-floating'><i
@@ -90,14 +85,7 @@
               >Search By Show</p>
             <input id='input4' type='text' class='validate' />
             <label for='input4'></label>
-            <button
-              class='btn waves-effect waves-light submit-button'
-              type='submit'
-              name='action'
-              style='margin-top: 10px'
-            >
-              Submit
-            </button>
+     
           </div>
           <div class='input-field col s12' style='margin-bottom: 10px'>
           <p  id='menu' class='waves-effect waves-light btn btn-floating'><i
@@ -105,13 +93,13 @@
               >Add Show</p>
             <input id='input5' type='text' class='validate' />
             <label for='input5'></label>
-            <button
+            {{!-- <button
               class='btn waves-effect waves-light submit-button'
               type='submit'
               name='action'
               style='margin-top: 10px'
             >
-              Submit
+              Submit --}}
             </button>
           </div>
           <div class='input-field col s12' style='margin-bottom: 10px'>
@@ -120,18 +108,34 @@
               >Update Show</p>
             <input id='input6' type='text' class='validate' />
             <label for='input6'></label>
-            <button
+            {{!-- <button
               class='btn waves-effect waves-light submit-button'
               type='submit'
               name='action'
               style='margin-top: 10px'
             >
-              Submit
+              Submit --}}
             </button>
           </div>
         </form>
       </div>
     </div>
+
+
+
+    <script>
+
+
+        
+  document.addEventListener('DOMContentLoaded', function () {
+    var tapTargetWave = document.querySelector('.tap-target-wave');
+
+    tapTargetWave.addEventListener('click', function () {
+        // Toggle the 'hidden' class on click
+        tapTargetWave.classList.toggle('hidden');
+    });
+});
+    </script>
     <script src="/js/home.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </body>

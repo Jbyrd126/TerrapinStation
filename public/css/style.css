@@ -14,7 +14,14 @@ body {
     max-height: 100vh;
     
 }
+.skele {
+   
+    margin-left: 25px;
+}
 
+.modal-text {
+    color: black;
+}
 
  a.turts#menu{
  

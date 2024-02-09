@@ -23,3 +23,4 @@ Venue.init(
 );
 
 module.exports = Venue;
+

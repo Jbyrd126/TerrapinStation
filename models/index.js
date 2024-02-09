@@ -1,6 +1,20 @@
 // import all models here
+const User = require('./User');
+const Date = require('./Date');
+const DataOne = require('./DataOne');
+
+User.hasMany(Date, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+});
+
+Date.belongsTo(User, {
+  foreignKey: 'user_id'
+});
 
 // create any associations here
 
 // export all models here
-module.exports = {};
+module.exports = 
+   { Date, User, DataOne}
+;

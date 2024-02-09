@@ -1,21 +1,56 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class DataOne extends Model {}
+class Set extends Model {}
 
-DataOne.init(
+Set.init(
   {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
-
-    versionId: {
+    venueName: {
       type: DataTypes.STRING,
     },
-
+    city: {
+      type: DataTypes.STRING,
+    },
+    state: {
+      type: DataTypes.STRING,
+    },
+    country: {
+      type: DataTypes.STRING,
+    },
+    tourName: {
+      type: DataTypes.STRING,
+    },
+    // Define a text field to store the array as a JSON string
+  setOneSongs: {
+    type: DataTypes.TEXT,
+    allowNull: true,
+    get() {
+      const value = this.getDataValue('setOnesongs');
+      return value ? JSON.parse(value) : null;
+    },
+    set(value) {
+      this.setDataValue('setOneSongs', JSON.stringify(value));
+    }
+  },
+     // Define a text field to store the array as a JSON string
+  setTwoSongs: {
+    type: DataTypes.TEXT,
+    allowNull: true,
+    get() {
+      const value = this.getDataValue('setTwoSongs');
+      return value ? JSON.parse(value) : null;
+    },
+    set(value) {
+      this.setDataValue('setTwoSongs', JSON.stringify(value));
+    }
+  },
+    encoreSongName: {
+      type: DataTypes.STRING,
+    },
+    encoreSongNameTwo: {
+      type: DataTypes.STRING,
+    },
+    
     eventDate: { type: DataTypes.DATEONLY },
     lastUpdated: { type: DataTypes.DATE },
     info: DataTypes.TEXT,
@@ -32,4 +67,4 @@ DataOne.init(
   }
 );
 
-module.exports = DataOne;
+module.exports = Set;

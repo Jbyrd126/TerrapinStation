@@ -63,7 +63,7 @@ Set.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'data one',
+    modelName: 'set',
   }
 );
 

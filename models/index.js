@@ -1,7 +1,7 @@
 // import all models here
 const User = require('./User');
 const Date = require('./Date');
-const DataOne = require('./Set');
+const DataOne = require('./set');
 
 User.hasMany(Date, {
   foreignKey: 'user_id',

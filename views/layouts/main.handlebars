@@ -22,16 +22,16 @@
     <div class="modal-content">
       <h4 class="modal-text">Sign Up</h4>
       <div class='row' id="modal1">
-  <form class='col s12'>
+  <form id='signup-form' class='col s12'>
     <div class='row'>
       <div class='input-field col s12'>
         <input
           placeholder='Placeholder'
-          id='user_name'
+          id='name'
           type='text'
           class='validate'
         />
-        <label for='user_name'>User Name</label>
+        <label for='name'> Name</label>
       </div>
     </div>
     <div class='row'>
@@ -53,23 +53,28 @@
       <a href="#!" class="modal-close waves-effect waves-green btn-flat">Submit</a>
     </div>
   </div>
-  <a class="skele waves-effect waves-light btn modal-trigger" href="#modal2">Login</a>
+  {{#if logged_in}}
+        <a id='logout' class="skele waves-effect waves-light btn modal-trigger">Logout</a>
+  {{else}}
+       <a class="skele waves-effect waves-light btn modal-trigger" href="#modal2">Login</a>
+  {{/if}}
 
   <!-- Modal Structure -->
   <div id="modal2" class="modal login-form">
     <div class="modal-content">
       <h4 class="modal-text">Login</h4>
+       
       <div class='row' id="modal2">
   <form class='col s12'>
     <div class='row'>
       <div class='input-field col s12'>
         <input
           placeholder='Placeholder'
-          id='user_name'
+          id='email'
           type='text'
           class='validate'
         />
-        <label for='user_name'>User Name</label>
+        <label for='email'>Email</label>
       </div>
     </div>
     <div class='row'>
@@ -185,16 +190,16 @@
 
 
 
-    <script>
+   
 
 
-// Only include the logout script if the user is logged in -->
+ <script>
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
+</script>
 
-
-    </script>
+    
 
     
     <script src="/js/home.js"></script>

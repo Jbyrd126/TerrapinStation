@@ -15,11 +15,11 @@ router.get('/', async (req, res) => {
     });
 
     // Serialize data so the template can read it
-    const sets = setData.map((project) => Set.get({ plain: true }));
+    const sets = setData.map((set) => set.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('homepage', { 
-      projects, 
+    res.render('home', { 
+      sets, 
       logged_in: req.session.logged_in 
     });
   } catch (err) {
@@ -29,7 +29,7 @@ router.get('/', async (req, res) => {
 
 router.get('/set/:id', async (req, res) => {
   try {
-    const setData = await Project.findByPk(req.params.id, {
+    const setData = await Set.findByPk(req.params.id, {
       include: [
         {
           model: User,

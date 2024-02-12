@@ -50,11 +50,11 @@ router.put('/:id', async (req, res) => {
   try {
     const setId = req.params.id;
     const updateData = req.body; // Assuming you expect data in the request body
-    const updatedSet = await Set.findByIdAndUpdate(setId, updateData, { new: true });
+    const updatedSet = await Set.findOneAndUpdate(setId, updateData, { new: true });
     console.log(`Set with ID ${setId} updated`);
     res.status(200).json(updatedSet);
   } catch (err) {
-    console.error(`There was an error updating data one with ID ${params}`);
+    console.error(`There was an error updating data one with ID ${setId}`);
     res.status(500).json(err);
   }
 });
@@ -63,11 +63,12 @@ router.put('/:id', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const setId = req.params.id;
-    const set = await Set.findById(setId);
+    console.log(setId);
+    const set = await Set.findByPk(setId);
     console.log(`Data one with ID ${setId} retrieved`);
-    res.status(200).json(set);
+    res.render('sets',set);
   } catch (err) {
-    console.error(`There was an error retrieving data one with ID ${setId}`);
+    console.error(`There was an error retrieving data one with ID `);
     res.status(500).json(err);
   }
 });

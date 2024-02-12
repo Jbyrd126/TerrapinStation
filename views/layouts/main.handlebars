@@ -53,24 +53,25 @@
     <!-- feature discovery test -->
     <a id='menu' class=' turts waves-effect waves-light  btn btn-floating '><img id="star" src="/images/grateful-dead-logo.svg" alt="gratefulDeadLogo"></a>
     <!-- Tap Target Structure -->
-    <div class='tap-target'  data-target='menu' >
+    <div class='tap-target'  data-target='menu' style='position: absolute; '>
       <div
         class='tap-target-content'
         style='
             inset: 0px 0px 0px 384px;
             display: flex;
             flex-direction: column;
-            align-items: center;
             width: 150px !important;
+          
             
           '
       >
-        <form id='featureForm'>
-          <div class='input-field col s12' style='margin-bottom: 10px'>
+      
+        <form id='featureForm' >
+          <div class='input-field col s12' style='margin: 10px 0px 10px 0'>
           
 
             <input id='input1' type='text' class='validate' />
-            <label for='input1'>Enter A Venue Here</label>
+            <label for='input1' class='yummy'>Enter A Venue Here</label>
             {{!-- <button
               class='btn waves-effect waves-light submit-button'
               type='submit'
@@ -80,12 +81,10 @@
               Submit
             </button> --}}
           </div>
-          <div class='input-field col s12' style='margin-bottom: 10px'>
-            <p id='menu' class='waves-effect waves-light btn btn-floating'><i
-                class='material-icons'
-              >Search By State</p>
+          <div class='input-field col s12' style='margin: 10px 0px 10px 0'>
+            <p id='menu' class=''><a id='menu' class=''></a></p>
             <input id='input2' type='text' class='validate' />
-            <label for='input2'></label>
+            <label for='input2' class='yummy'>Enter A City Here</label>
             {{!-- <button
               class='btn waves-effect waves-light submit-button'
               type='submit'
@@ -95,54 +94,47 @@
               Submit
             </button> --}}
           </div>
-          <div class='input-field col s12' style='margin-bottom: 10px'>
-            <p id='menu' class='waves-effect waves-light btn btn-floating'><i
-                class='material-icons'
-              >Search For Songs</p>
+          <div class='input-field col s12' style='margin: 10px 0px 10px 0'>
+            <p id='menu' class=''><a id='menu' class=''></a></p>
             <input id='input3' type='text' class='validate' />
-            <label for='input3'></label>
+            <label for='input3' class='yummy'>Enter A State Here</label>
           
           </div>
-          <div class='input-field col s12' style='margin-bottom: 10px'>
-              <p id='menu' class='waves-effect waves-light btn btn-floating'><i
-                class='material-icons'
-              >Search By Show</p>
+          <div class='input-field col s12' style='margin: 10px 0px 10px 0>
+          <p id='menu' class=''><a id='menu' class=''></a></p>
             <input id='input4' type='text' class='validate' />
-            <label for='input4'></label>
+            <label for='input4' class='yummy'>Enter A Song Title Here</label>
      
           </div>
-          <div class='input-field col s12' style='margin-bottom: 10px'>
-          <p  id='menu' class='waves-effect waves-light btn btn-floating'><i
-                class='material-icons'
-              >Add Show</p>
+          <div class='input-field col s12' style='margin: 10px 0px 10px 0>
+           <p id='menu' class=''><a id='menu' class=''></a></p>
             <input id='input5' type='text' class='validate' />
-            <label for='input5'></label>
-            {{!-- <button
+            <label for='input5' class='yummy'>Enter A Song Title Here</label>
+            {{!-- <
               class='btn waves-effect waves-light submit-button'
               type='submit'
               name='action'
               style='margin-top: 10px'
             >
               Submit --}}
-            </button>
+            
           </div>
-          <div class='input-field col s12' style='margin-bottom: 10px'>
-            <p  id='menu' class='waves-effect waves-light btn btn-floating'><i
-                class='material-icons'
-              >Update Show</p>
+          <div class='input-field col s12' style='margin: 10px 0px 10px 0'>
+            <p  id='menu' class=''><a id='menu' class=''></a></p>
             <input id='input6' type='text' class='validate' />
-            <label for='input6'></label>
-            {{!-- <button
+            <label for='input6' class='yummy'>Look at this shit</label>
+            {{!-- <
               class='btn waves-effect waves-light submit-button'
               type='submit'
               name='action'
               style='margin-top: 10px'
             >
               Submit --}}
-            </button>
+            
           </div>
         </form>
-      </div>
+        
+      
     </div>
 
 
@@ -150,15 +142,6 @@
     <script>
 
 
-        
-  document.addEventListener('DOMContentLoaded', function () {
-    var tapTargetWave = document.querySelector('.tap-target-wave');
-
-    tapTargetWave.addEventListener('click', function () {
-        // Toggle the 'hidden' class on click
-        tapTargetWave.classList.toggle('hidden');
-    });
-}); 
 // Only include the logout script if the user is logged in -->
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
@@ -166,6 +149,8 @@
 
 
     </script>
+
+    
     <script src="/js/home.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </body>

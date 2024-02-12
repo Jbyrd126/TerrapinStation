@@ -1,13 +1,13 @@
 const router = require('express').Router();
 
 // import any models you plan to use for this data's routes here
-
+const Set = require('../../models/Set')
 // If you would like to you an authGuard middleware, import it here
 
 // /api/dataOne
 // add a post API route here
 router.post('/', async (req, res) => {
-  console.log('Data one attempting to be added');
+  console.log('Set attempting to be added');
   try {
   } catch (err) {
     console.log('There was an error adding data one');
@@ -20,7 +20,7 @@ router.post('/', async (req, res) => {
 router.delete('/:id', async (req, res) => {
   try {
     const params = req.params;
-    console.log(`Data one with ID ${params} attempting to be deleted`);
+    console.log(`Set with ID ${params} attempting to be deleted`);
   } catch (err) {
     console.log(`There was an error deleting data one with ID ${params}`);
     res.status(500).json(err);
@@ -32,7 +32,7 @@ router.delete('/:id', async (req, res) => {
 router.put('/:id', async (req, res) => {
   try {
     const params = req.params;
-    console.log(`Data one with ID ${params} attempting to be updated`);
+    console.log(`Set with ID ${params} attempting to be updated`);
   } catch (err) {
     console.log(`There was an error updating data one with ID ${params}`);
     res.status(500).json(err);

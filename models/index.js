@@ -1,7 +1,7 @@
 // import all models here
 const User = require('./User');
 const Date = require('./Date');
-const DataOne = require('./set');
+const Set = require('./Set');
 
 User.hasMany(Date, {
   foreignKey: 'user_id',
@@ -13,8 +13,16 @@ Date.belongsTo(User, {
 });
 
 // create any associations here
+User.hasMany(Set, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+});
+
+Set.belongsTo(User, {
+  foreignKey: 'user_id'
+});
 
 // export all models here
 module.exports = 
-   { Date, User, DataOne}
+   { Date, User, Set}
 ;

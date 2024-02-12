@@ -1,9 +1,19 @@
 const router = require('express').Router();
 
 // import any models you plan to use for this data's routes here
-const Set = require('../../models/set')
+const Set = require('../../models/Set')
 // If you would like to you an authGuard middleware, import it here
 
+router.get('/', async (req, res) => {
+  console.log('---------Set Data----------');
+  console.log(setData);
+  Set.findAll().then((setData)=>{
+    console.log('---------Set Data Found----------');
+    res.json(setData);
+    
+
+  })
+})
 // /api/dataOne
 // add a post API route here
 router.post('/', async (req, res) => {
@@ -27,9 +37,9 @@ router.delete('/:id', async (req, res) => {
     const updatedSet = await Set.findByIdAndUpdate(setId, updateData, { new: true });
     console.log(`Set with ID ${setId} updated`);
     res.status(200).json(updatedSet);
-    console.log(`Set with ID ${params} attempting to be deleted`);
+    console.log(`Set with ID ${setId} attempting to be deleted`);
   } catch (err) {
-    console.log(`There was an error deleting data one with ID ${params}`);
+    console.log(`There was an error deleting data one with ID ${setId}`);
     res.status(500).json(err);
   }
 });
@@ -50,14 +60,14 @@ router.put('/:id', async (req, res) => {
 });
 // /api/dataOne/:id
 // add a get API route here
-router.get('/id', async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
     const setId = req.params.id;
     const set = await Set.findById(setId);
     console.log(`Data one with ID ${setId} retrieved`);
     res.status(200).json(set);
   } catch (err) {
-    console.error(`There was an error retrieving data one with ID ${params}`);
+    console.error(`There was an error retrieving data one with ID ${setId}`);
     res.status(500).json(err);
   }
 });

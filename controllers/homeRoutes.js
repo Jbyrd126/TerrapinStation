@@ -1,36 +1,50 @@
 const router = require('express').Router();
+const { Set, User } = require('../models');
 
-// Import any models you plan to use for data's routes here
-const {User } = require('../models');
-// If you would like to use an authGuard middleware, import it here
 
-// add a get / (landing page) route here
 router.get('/', async (req, res) => {
-  console.log('Landing page attempting to be retrieved');
   try {
-    res.render('home')
+    // Get all projects and JOIN with user data
+    const setData = await Set.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+    });
+
+    // Serialize data so the template can read it
+    const sets = setData.map((project) => Set.get({ plain: true }));
+
+    // Pass serialized data and session flag into template
+    res.render('homepage', { 
+      projects, 
+      logged_in: req.session.logged_in 
+    });
   } catch (err) {
-    console.log('There was an error retrieving landing page');
     res.status(500).json(err);
   }
 });
 
-// add a get /login route here
-router.get('/login', (req, res) => {
-  console.log('Login page attempting to be retrieved');
+router.get('/set/:id', async (req, res) => {
   try {
-  } catch (err) {
-    console.log('There was an error retrieving login page');
-    res.status(500).json(err);
-  }
-});
+    const setData = await Project.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+    });
 
-// add a get /signup route here
-router.get('/signup', (req, res) => {
-  console.log('Signup page attempting to be retrieved');
-  try {
+    const set = setData.get({ plain: true });
+
+    res.render('set', {
+      ...set,
+      logged_in: req.session.logged_in
+    });
   } catch (err) {
-    console.log('There was an error retrieving signup page');
     res.status(500).json(err);
   }
 });

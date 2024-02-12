@@ -1,105 +1,137 @@
 /* any css stylesheets can go in this folder */
 /* hint- remember to import them in your handlebars! */
 
-body, html {
-max-height: 100vh;
-    margin: 0;
+body,
+html {
+  max-height: 100vh;
+  margin: 0;
   overflow-y: hidden;
 }
 
 body {
-    background: url('/images/deadhead.jpg');
-    background-size: cover;
-    background-position: center;
-    max-height: 100vh;
-    
+  background: url('/images/deadhead.jpg');
+  background-size: cover;
+  background-position: center;
+  max-height: 100vh;
 }
 .skele {
-   
-    margin-left: 25px;
+  margin-left: 25px;
 }
 
 .modal-text {
-    color: black;
+  color: black;
 }
 
- a.turts#menu{
- 
-   top: 46vh!important;
-   left: 46vw !important;
-   width: 200px !important;
-   height: 200px !important;
-   display: flex;
-   align-content: center;
-   justify-content: center;
-   align-items: center;
+#featureForm {
+  z-index: -50000000000;
 }
-  
+
+a.turts#menu {
+  top: 46vh !important;
+  left: 46vw !important;
+  width: 200px !important;
+  height: 200px !important;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.hidden {
+    display: none;
+  }
+
+
 .tap-target {
-    color: black;
-    /* position: absolute; */
-    font-size: 1rem;
-    border-radius: 50%;
-    background-image: url('/images/record.svg');
-    background-size: cover;  
-    -webkit-box-shadow: 0 20px 20px 0 rgba(0,0,0,0.14), 0 10px 50px 0 rgba(0,0,0,0.12), 0 30px 10px -20px rgba(0,0,0,0.2);
-    box-shadow: 0 20px 20px 0 rgba(0,0,0,0.14), 0 10px 50px 0 rgba(0,0,0,0.12), 0 30px 10px -20px rgba(0,0,0,0.2);
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    -webkit-transition: opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1),-webkit-transform 0.3s cubic-bezier(0.42, 0, 0.58, 1);
-    transition: opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1),-webkit-transform 0.3s cubic-bezier(0.42, 0, 0.58, 1);
-    transition: transform 0.3s cubic-bezier(0.42, 0, 0.58, 1),opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1);
-    transition: transform 0.3s cubic-bezier(0.42, 0, 0.58, 1),opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1),-webkit-transform 0.3s cubic-bezier(0.42, 0, 0.58, 1);
-    animation: spin 7s linear infinite;
+  color: black;
+  /* position: absolute; */
+  font-size: 1rem;
+  border-radius: 50%;
+  background-image: url('/images/record.svg');
+  background-size: cover;
+  -webkit-box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.14),
+    0 10px 50px 0 rgba(0, 0, 0, 0.12), 0 30px 10px -20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.14),
+    0 10px 50px 0 rgba(0, 0, 0, 0.12), 0 30px 10px -20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1),
+    -webkit-transform 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  transition: opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1),
+    -webkit-transform 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  transition: transform 0.3s cubic-bezier(0.42, 0, 0.58, 1),
+    opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  transition: transform 0.3s cubic-bezier(0.42, 0, 0.58, 1),
+    opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1),
+    -webkit-transform 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+  /* animation: spin 2s linear infinite; */
 }
-
-
-@keyframes spin{
-    from{
-        transform: rotate(0deg);
-    }
-    to{
-        transform: rotate(360deg);
-    }
-}
-
 
 body > div > div.tap-target > div{
 
-    animation: unset;
+    transform: none !important;
+  animation: none !important;
+
+}
+
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body > div > div.tap-target > div {
+  animation: unset;
 }
 
 body > div > div.tap-target > div::after {
-    animation: none;
-    background-color: pink;
+  animation: none;
+  background-color: pink;
 }
 
+body > div > div.tap-target-wave{
 
+    z-index: 50000000;
+}
 
+.tap-target-wave::before,
+.tap-target-wave::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background-color: #ffffff;
+  top: 100px;
+  left: 105px;
+}
 
-.tap-target-wave::before, .tap-target-wave::after {
-  
-    content: '';
-    display: block;
-    position: absolute;
-    width: 50%;
-    height: 50%;
-    border-radius: 50%;
-    background-color: #ffffff;
-    top: 100px;
-    left: 105px;
+body > div > div.tap-target-wave{
+    display: none;
+    
 }
 
 .tap-target-wave.hidden {
-    display: none;
+  display: none;
+}
+.input-field>label {
+    color: red;
+    -webkit-text-stroke-width: 1px ;
+    -webkit-text-stroke-color:white ;
+    font-size: 20px;
 }
 
 
-.btn-floating
-{
+.btn-floating {
   display: inline-block;
   color: #fff;
   position: relative;
@@ -111,29 +143,42 @@ body > div > div.tap-target > div::after {
   padding: 0;
   background-color: white;
   border-radius: 50%;
-  -webkit-transition: background-color .3s;
-  transition: background-color .3s;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
   cursor: pointer;
   vertical-align: middle;
 }
- 
+
 .btn-floating:hover {
-    background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
-  }
+  background: linear-gradient(
+    to right,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red
+  );
+}
 
- a.turts#menu>{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+a.turts#menu > {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
 
 
-    
- }
 
 
- #star{
-    width: 90%;
-    height: 90%;
-    
- }
 
+#star {
+  width: 90%;
+  height: 90%;
+}
+
+.input-field {
+    width: 100%;
+    margin-bottom: 25px;
+}

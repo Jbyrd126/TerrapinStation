@@ -63,7 +63,7 @@ Set.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'set',
+    modelName: 'Set',
   }
 );
 

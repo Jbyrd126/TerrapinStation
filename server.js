@@ -58,7 +58,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 // connects database then starts express.js server
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () =>
     console.log(
       `Visit local site at http://localhost:${PORT}. Visit API data at http://localhost:${PORT}/api/dataOne or (||)

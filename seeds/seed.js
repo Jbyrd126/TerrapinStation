@@ -48,7 +48,7 @@ const userDataPath = path.join(__dirname, './userData.json');
 const userData = JSON.parse(fs.readFileSync(userDataPath, 'utf8'));
 
 // Read and import the data from show.json
-const showDataPath = path.join(__dirname, '../db/show.json');
+const showDataPath = path.join(__dirname, './show.json');
 const showData = JSON.parse(fs.readFileSync(showDataPath, 'utf8'));
 
 const seedDatabase = async () => {

@@ -1,7 +1,8 @@
 const router = require('express').Router();
+const userRoutes = require('./userRoutes');
+const setRoutes = require('./setRoutes');
 
-// Import all of the routes from /api/ here
-
-// Connect the routes to the router here
+router.use('/users', userRoutes);
+router.use('/set', setRoutes);
 
 module.exports = router;

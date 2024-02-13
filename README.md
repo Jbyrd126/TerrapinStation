@@ -1,42 +1,37 @@
-<!-- For assistance using this README for your project, reach out to your instructinoal staff. -->
 
-<!-- Important: Highlight "404pandas" and shift+command+L (for mac) or cntrl+shift+L (for windows) to select all instances of the example Github username and type your Username in its place -->
-<!-- Important: Highlight "fun_with_yen" and shift+command+L (for mac) or cntrl+shift+L (for windows) to select all instances of the example Github repository name and type your repostitory name in its place -->
 
 <div align="center">
 
-  <!-- Add badges using the following format: -->
-  <!-- ![Name](urlToShieldHere)(urlToGithubHere) -->
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Contributors](https://img.shields.io/github/contributors/404pandas/fun_with_yen.svg?style=plastic&logo=appveyor)](https://github.com/404pandas/fun_with_yen/graphs/contributors)
-[![Forks](https://img.shields.io/github/forks/404pandas/fun_with_yen.svg?style=plastic&logo=appveyor)](https://github.com/404pandas/fun_with_yen/network/members)
-[![Stargazers](https://img.shields.io/github/stars/404pandas/fun_with_yen.svg?style=plastic&logo=appveyor)](https://github.com/404pandas/fun_with_yen/stargazers)
-[![Issues](https://img.shields.io/github/issues/404pandas/fun_with_yen.svg?style=plastic&logo=appveyor)](https://github.com/404pandas/fun_with_yen/issues)
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-black.svg?style=plastic&logo=appveyor&logo=linkedin&colorB=555)](https://linkedin.com/in/404pandas)
+[![Contributors](https://img.shields.io/github/contributors/https://github.com/Jbyrd126/WharfRatstyle=plastic&logo=appveyor)](https://github.com/Jbyrd126/WharfRat/graphs/contributors)
+[![Forks](https://img.shields.io/github/forks/https://github.com/Jbyrd126/WharfRatstyle=plastic&logo=appveyor)](https://github.com/Jbyrd126/WharfRat/network/members)
+[![Stargazers](https://img.shields.io/github/stars/(https://github.com/Jbyrd126/WharfRat)style=plastic&logo=appveyor)](https://github.com/Jbyrd126/WharfRat/stargazers)
+[![Issues](https://img.shields.io/github/issues/https://github.com/Jbyrd126/WharfRat?style=plastic&logo=appveyor)](https://github.com/Jbyrd126/WharfRat)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-black.svg?style=plastic&logo=appveyor&logo=linkedin&colorB=555)]
 
 </div>
 
 <!-- PROJECT LOGO -->
 
 <div align="center">
-  <a href="https://github.com/404pandas/fun_with_yen">
+  <a href="https://github.com/Jbyrd126/WharfRat">
     <img src="./public/images/" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Fun with Yen</h3>
+  <h3 align="center">Wharf Rats</h3>
 
   <p align="center">
-    Traceable learning app for my daughter    <br />
-    <a href="https://github.com/404pandas/fun_with_yen"><strong>Explore the docs »</strong></a>
+    A Grateful Dead App for you're wildest dreams   <br />
+    <a href="https://github.com/Jbyrd126/WharfRat"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <!-- !!!IMPORTANT!!! add your deployment link here -->
-    <a href="https://github.com/404pandas/fun_with_yen">View Demo(Broken)</a>
+    <a href="https://github.com/Jbyrd126/WharfRat">View Demo(Broken)</a>
     ·
-    <a href="https://github.com/404pandas/fun_with_yen/issues">Report Bug</a>
+    <a href="https://github.com/Jbyrd126/WharfRat">Report Bug</a>
     ·
-    <a href="https://github.com/404pandas/fun_with_yen/issues">Request Feature</a>
+    <a href="https://github.com/Jbyrd126/WharfRat">Request Feature</a>
 
   </p>
 </div>
@@ -105,7 +100,7 @@ Once completely built, this application will function as a deployed app on Herok
 1. Clone the rep
 
 ```
-git clone https://github.com/404pandas/fun_with_yen.git
+git clone [https://github.com/Jbyrd126/WharfRat](https://github.com/Jbyrd126/WharfRat)
 ```
 
 2. Install dependencies
@@ -137,6 +132,8 @@ npm run start
 Once the app is functional, screenshots will be added in this section.
 
 <!-- ROADMAP -->
+## Google docs slide show
+https://docs.google.com/presentation/d/1V0_BmExz6LxJb9NncjQuLK2wVkBkZyFP-kH6S5oub9g/edit#slide=id.g2b8ad205469_0_0
 
 ## Roadmap
 
@@ -167,7 +164,7 @@ Once the app is functional, screenshots will be added in this section.
 - [ ] Add Lines of future development ideas here
 - [ ] Add Lines of future development ideas here
 
-See the [open issues](https://github.com/404pandas/fun_with_yen/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/Jbyrd126/WharfRat) for a full list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 
@@ -198,11 +195,16 @@ See LICENSE.txt for more information.
 
 <!-- Add your name, portfolio link, and email if you would like here -->
 
-[Mary Elenius](https://maryelenius.com/d20) - mary.panda.jackson@gmail.com
+[Robert Byrd]
+Glurk33@gmail.com
+[ Daniel Desta]
+tekoladaniel@gmail.com
+[Ryan Mcintyre]
+rmcintyre598@gmail.com
 
 Project Links:
 
-[Github Repository](https://github.com/404pandas/fun_with_yen)
+[Github Repository] https://github.com/Jbyrd126/WharfRat
 
 <!-- !!!IMPORTANT!!! add your deployment link here -->
 

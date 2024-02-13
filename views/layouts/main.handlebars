@@ -65,10 +65,10 @@
       <h4 class="modal-text">Login</h4>
        
       <div class='row' id="modal2">
-  <form class='col s12'>
+  <form id='login-form' class='col s12'>
     <div class='row'>
       <div class='input-field col s12'>
-        <input
+        <input id="email"
           placeholder='Placeholder'
           id='email'
           type='text'
@@ -79,15 +79,16 @@
     </div>
     <div class='row'>
       <div class='input-field col s12'>
-        <input id='password' type='password' class='validate' />
-        <label for='password'>Password</label>
+         <label for='password'>Password</label>
+        <input id='password' type='password' id="password" />
+       
       </div>
     </div>
   </form>
 </div>
     </div>
     <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Submit</a>
+      <a href="#!" id="login-submit" class="modal-close waves-effect waves-green btn-flat">Submit</a>
     </div>
   </div>
       <a href="#" class="brand-logo center">Wharf Rats</a>

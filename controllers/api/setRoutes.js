@@ -66,10 +66,10 @@ router.get('/:id', async (req, res) => {
     console.log(setId);
     const set = await Set.findByPk(setId);
     console.log(`Data one with ID ${setId} retrieved`);
-    res.render('sets',set);
+    res.json(set);
   } catch (err) {
-    console.error(`There was an error retrieving data one with ID `);
-    res.status(500).json(err);
+    console.error(`There was an error retrieving data one with ID ${req.params.id}`);
+    res.status(500).json({ error: 'Internal Server Error' });
   }
 });
 

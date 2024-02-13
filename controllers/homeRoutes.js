@@ -41,7 +41,7 @@ router.get('/set/:id', async (req, res) => {
     const set = setData.get({ plain: true });
 
     res.render('set', {
-      ...set,
+      ...sets,
       logged_in: req.session.logged_in
     });
   } catch (err) {

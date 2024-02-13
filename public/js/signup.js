@@ -7,14 +7,14 @@ const signupFormHandler = async function (event) {
       .querySelector('#name')
       .value.trim();
     const password = document
-      .querySelector('#password')
+      .querySelector('#signup-password')
       .value.trim();
 
       const email = document
-      .querySelector('#email')
+      .querySelector('#signup-email')
       .value.trim();
   
-  
+  console.log(name,password,email);
     if (password.length >= 8 && name) {
       const response = await fetch('/api/users/signup', {
         method: 'POST',
@@ -39,5 +39,6 @@ const signupFormHandler = async function (event) {
   };
   
   document
-    .querySelector('#signup-form')
-    .addEventListener('submit', signupFormHandler);
+    .querySelector('.signup-form')
+    .addEventListener('click', signupFormHandler);
+    console.log("hooked up");

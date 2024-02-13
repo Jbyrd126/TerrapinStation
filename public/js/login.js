@@ -3,7 +3,7 @@ const loginFormHandler = async (event) => {
 
   const email = document.querySelector('#login-email').value.trim();
   const password = document.querySelector('#login-password').value.trim();
-
+    console.log(email,password);
   if (email && password) {
       const response = await fetch('/api/users/login', {
           method: 'POST',
@@ -19,7 +19,7 @@ const loginFormHandler = async (event) => {
   }
 };
 
-document.querySelector('#login-form').addEventListener('submit', loginFormHandler);
+document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
 
 // Add event listener for the login modal submit button
 document.querySelector('#login-submit').addEventListener('click', loginFormHandler);

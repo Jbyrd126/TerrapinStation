@@ -58,11 +58,7 @@ router.get('/user/:id', async (req, res) => {
     const user = userData.get({ plain: true });
 
     console.log('User data:', user);
-
-    res.json('user', {
-      ...user,
-      logged_in: req.session.logged_in
-    });
+res.status(200).json(userData);
   } catch (err) {
     console.error(err);
     res.status(500).json(err);

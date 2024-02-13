@@ -15,6 +15,7 @@
   <body>
       <nav>
     <div class="nav-wrapper">
+
       <a class="skele waves-effect waves-light btn modal-trigger" href="#modal1">Sign Up</a>
 
   <!-- Modal Structure -->
@@ -36,21 +37,24 @@
     </div>
     <div class='row'>
       <div class='input-field col s12'>
-        <input id='password' type='password' class='validate' />
+        <input id='signup-password' type='password' class='validate' />
         <label for='password'>Password</label>
       </div>
     </div>
     <div class='row'>
       <div class='input-field col s12'>
-        <input id='email' type='email' class='validate' />
-        <label for='email'>Email</label>
+        <input id='signup-email' type='email' class='validate' />
+        <label for='signup-email'>Email</label>
       </div>
+
     </div>
+     <button type="submit" class="signup-form waves-effect waves-green btn-flat">Submit</button>
   </form>
 </div>
     </div>
     <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Submit</a>
+       <button class="modal-close waves-effect waves-green btn-flat">Close</button>
+     
     </div>
   </div>
   {{#if logged_in}}
@@ -68,27 +72,27 @@
   <form id='login-form' class='col s12'>
     <div class='row'>
       <div class='input-field col s12'>
-        <input id="email"
+        <input id="login-email"
           placeholder='Placeholder'
-          id='email'
           type='text'
           class='validate'
         />
-        <label for='email'>Email</label>
+        <label for='login-email'>Email</label>
       </div>
     </div>
     <div class='row'>
       <div class='input-field col s12'>
          <label for='password'>Password</label>
-        <input id='password' type='password' id="password" />
+        <input id='login-password' type='password' />
        
       </div>
     </div>
+      <button type="submit" class="login-form waves-effect waves-green btn-flat">Submit</button>
   </form>
 </div>
     </div>
     <div class="modal-footer">
-      <a href="#!" id="login-submit" class="modal-close waves-effect waves-green btn-flat">Submit</a>
+      <a  id="login-submit" class="modal-close waves-effect waves-green btn-flat">Submit</a>
     </div>
   </div>
       <a href="#" class="brand-logo center">Wharf Rats</a>
@@ -188,23 +192,12 @@
         
       
     </div>
-
-
-
-   
-
-
- <script>
-  {{#if logged_in}}
+ {{#if logged_in}}
   <script src="/js/logout.js"></script>
-  {{/if}}
-</script>
-
-    
-
-    
+  {{/if}} 
     <script src="/js/home.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="./js/login.js"></script>
+  <script src="./js/signup.js"></script>
   </body>
 </html>

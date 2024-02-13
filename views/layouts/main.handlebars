@@ -1,6 +1,6 @@
 <html lang='en'>
   <head>
-     <link href="./css/reset.css" rel="stylesheet">
+     {{!-- <link href="./css/reset.css" rel="stylesheet"> --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
@@ -117,76 +117,93 @@
             display: flex;
             flex-direction: column;
             width: 150px !important;
-          
-            
+            z-index: -500000;
           '
       >
       
-        <form id='featureForm' >
+        <form id='featureForm' class="on-top">
           <div class='input-field col s12' style='margin: 10px 0px 10px 0'>
           
 
             <input id='input1' type='text' class='validate' />
             <label for='input1' class='yummy'>Enter A Venue Here</label>
-            {{!-- <button
+            <button
               class='btn waves-effect waves-light submit-button'
               type='submit'
               name='action'
               style='margin-top: 10px'
             >
               Submit
-            </button> --}}
+            </button>
           </div>
           <div class='input-field col s12' style='margin: 10px 0px 10px 0'>
             <p id='menu' class=''><a id='menu' class=''></a></p>
             <input id='input2' type='text' class='validate' />
             <label for='input2' class='yummy'>Enter A City Here</label>
-            {{!-- <button
+            <button
               class='btn waves-effect waves-light submit-button'
               type='submit'
               name='action'
               style='margin-top: 10px'
             >
               Submit
-            </button> --}}
+            </button>
           </div>
           <div class='input-field col s12' style='margin: 10px 0px 10px 0'>
             <p id='menu' class=''><a id='menu' class=''></a></p>
             <input id='input3' type='text' class='validate' />
             <label for='input3' class='yummy'>Enter A State Here</label>
-          
-          </div>
-          <div class='input-field col s12' style='margin: 10px 0px 10px 0>
-          <p id='menu' class=''><a id='menu' class=''></a></p>
-            <input id='input4' type='text' class='validate' />
-            <label for='input4' class='yummy'>Enter A Song Title Here</label>
-     
-          </div>
-          <div class='input-field col s12' style='margin: 10px 0px 10px 0>
-           <p id='menu' class=''><a id='menu' class=''></a></p>
-            <input id='input5' type='text' class='validate' />
-            <label for='input5' class='yummy'>Enter A Song Title Here</label>
-            {{!-- <
+               <button
               class='btn waves-effect waves-light submit-button'
               type='submit'
               name='action'
               style='margin-top: 10px'
             >
-              Submit --}}
+              Submit
+                </button>
+          
+          </div>
+          <div class='input-field col s12' style='margin: 10px 0px 10px 0'>
+          <p id='menu' class=''><a id='menu' class=''></a></p>
+            <input id='input4' type='text' class='validate' />
+            <label for='input4' class='yummy'>Enter A Song Title Here</label>
+               <button
+              class='btn waves-effect waves-light submit-button'
+              type='submit'
+              name='action'
+              style='margin-top: 10px'
+            >
+              Submit
+                </button>
+            
+     
+          </div>
+          <div class='input-field col s12' style='margin: 10px 0px 10px 0'>
+           <p id='menu' class=''><a id='menu' class=''></a></p>
+            <input id='input5' type='text' class='validate' />
+            <label for='input5' class='yummy'>Enter A Song Title Here</label>
+            <button
+              class='btn waves-effect waves-light submit-button'
+              type='submit'
+              name='action'
+              style='margin-top: 10px'
+            >
+              Submit
+                </button>
             
           </div>
           <div class='input-field col s12' style='margin: 10px 0px 10px 0'>
             <p  id='menu' class=''><a id='menu' class=''></a></p>
             <input id='input6' type='text' class='validate' />
             <label for='input6' class='yummy'>Look at this shit</label>
-            {{!-- <
+            <button
               class='btn waves-effect waves-light submit-button'
               type='submit'
               name='action'
               style='margin-top: 10px'
             >
-              Submit --}}
-            
+              Submit
+              </button>
           </div>
         </form>
         

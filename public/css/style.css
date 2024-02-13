@@ -19,12 +19,10 @@ body {
 }
 
 .modal-text {
-  color: black;
+  color: whitesmoke;
 }
 
-#featureForm {
-  z-index: -50000000000;
-}
+
 
 a.turts#menu {
   top: 46vh !important;
@@ -68,15 +66,9 @@ a.turts#menu {
   transition: transform 0.3s cubic-bezier(0.42, 0, 0.58, 1),
     opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1),
     -webkit-transform 0.3s cubic-bezier(0.42, 0, 0.58, 1);
-  /* animation: spin 2s linear infinite; */
+     /* animation: spin 2s linear infinite; */
 }
 
-body > div > div.tap-target > div{
-
-    transform: none !important;
-  animation: none !important;
-
-}
 
 
 @keyframes spin {
@@ -97,10 +89,6 @@ body > div > div.tap-target > div::after {
   background-color: pink;
 }
 
-body > div > div.tap-target-wave{
-
-    z-index: 50000000;
-}
 
 .tap-target-wave::before,
 .tap-target-wave::after {
@@ -124,7 +112,7 @@ body > div > div.tap-target-wave{
   display: none;
 }
 .input-field>label {
-    color: red;
+    color: black;
     -webkit-text-stroke-width: 1px ;
     -webkit-text-stroke-color:white ;
     font-size: 20px;
@@ -182,3 +170,4 @@ a.turts#menu > {
     width: 100%;
     margin-bottom: 25px;
 }
+

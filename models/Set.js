@@ -25,7 +25,7 @@ Set.init(
     type: DataTypes.TEXT,
     allowNull: true,
     get() {
-      const value = this.getDataValue('setOnesongs');
+      const value = this.getDataValue('setOneSongs');
       return value ? JSON.parse(value) : null;
     },
     set(value) {

@@ -4,18 +4,7 @@ const router = require('express').Router();
 const Set = require('../../models/Set')
 // If you would like to you an authGuard middleware, import it here
 
-router.get('/', async (req, res) => {
-  console.log('---------Set Data----------');
-  console.log(setData);
-  Set.findAll().then((setData)=>{
-    console.log('---------Set Data Found----------');
-    res.json(setData);
-    
 
-  })
-})
-// /api/dataOne
-// add a post API route here
 router.post('/', async (req, res) => {
   console.log('Set attempting to be added');
   try {

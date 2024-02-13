@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../models/User');
+const  User = require('../../models/User');
 
 // router.post('/login', async (req, res) => {
 //   try {
@@ -70,6 +70,7 @@ const { User } = require('../../models/User');
 //     res.status(404).end();
 //   }
 // });
+
 
 router.get('/:id', async (req, res) => {
   try {

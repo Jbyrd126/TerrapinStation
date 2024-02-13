@@ -49,17 +49,64 @@ router.put('/:id', async (req, res) => {
 });
 // /api/dataOne/:id
 // add a get API route here
-router.get('/:id', async (req, res) => {
+router.get('/:city', async (req, res) => {
+ const city= req.params.city
+  
   try {
-    const setId = req.params.id;
-    console.log(setId);
-    const set = await Set.findByPk(setId);
-    console.log(`Data one with ID ${setId} retrieved`);
-    res.json(set);
+    const setData = await Set.findAll({where:{city:city}});
+    const sets = setData.map((set) =>set.get({ plain: true }));
+    console.log(`data retrieved`, sets);
+    res.render("sets", {sets})
   } catch (err) {
-    console.error(`There was an error retrieving data one with ID ${req.params.id}`);
+    console.error(`There was an error retrieving data ${req.params.city}`);
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
 
+router.get('/venue/:venue_name', async (req, res) => {
+  try {
+    const venueName = req.params.venue_name;
+    console.log(venueName);
+    const set = await Set.findAll(venueName);
+    console.log(`Data one with ID ${venueName} retrieved`);
+    res.json(set);
+  } catch (err) {
+    console.error(`There was an error retrieving data one with ID ${req.params.venue_name}`);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+router.get('/city/:city', async (req, res) => {
+  try {
+    const cityName = req.params.city;
+    console.log(cityName);
+    const set = await Set.findAll(city);
+    console.log(`Data one with ID ${cityName} retrieved`);
+    res.json(set);
+  } catch (err) {
+    console.error(`There was an error retrieving data one with ID ${req.params.city}`);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+
+// // Define route to handle search requests
+// app.post('/search', (req, res) => {
+//   // Retrieve search parameters from request body
+//   const { venue, city, state, songTitle } = req.body;
+
+//   // Perform search based on parameters
+//   // Your search logic here...
+
+//   // For demonstration, sending dummy response
+//   const searchResults = [];
+
+//   // Send search results as JSON response
+//   res.json(searchResults);
+// });
+
+
+
 module.exports = router;
+
+

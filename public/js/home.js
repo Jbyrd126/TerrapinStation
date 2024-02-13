@@ -32,3 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var elems = document.querySelectorAll('.modal');
     var instances = M.Modal.init(elems);
   });
+const button= document.getElementById('set-city');
+  button.addEventListener('click', function() {
+    location.href=`/api/set/${document.querySelector('#input2').value}`
+  });
+

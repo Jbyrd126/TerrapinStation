@@ -39,9 +39,10 @@ router.get('/set/:id', async (req, res) => {
     });
 
     const set = setData.get({ plain: true });
+    console.log('Set data:', set);
 
-    res.render('set', {
-      ...sets,
+    res.json('set', {
+      ...set,
       logged_in: req.session.logged_in
     });
   } catch (err) {
@@ -49,4 +50,22 @@ router.get('/set/:id', async (req, res) => {
   }
 });
 
+router.get('/user/:id', async (req, res) => {
+  try {
+    const userData = await User.findByPk(req.params.id);
+
+
+    const user = userData.get({ plain: true });
+
+    console.log('User data:', user);
+
+    res.json('user', {
+      ...user,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json(err);
+  }
+});
 module.exports = router;

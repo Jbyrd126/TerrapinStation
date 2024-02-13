@@ -31,10 +31,6 @@ const signupFormHandler = async function (event) {
       } else {
         alert('Failed to sign up');
       }
-    } else {
-      alert(
-        'Please include both a username and password, and make sure your password is at least 8 characters long'
-      );
     }
   };
   

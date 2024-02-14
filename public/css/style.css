@@ -19,10 +19,8 @@ body {
 }
 
 .modal-text {
-  color: whitesmoke;
+  color: black;
 }
-
-
 
 a.turts#menu {
   top: 46vh !important;
@@ -35,11 +33,9 @@ a.turts#menu {
   align-items: center;
 }
 
-
 .hidden {
-    display: none;
-  }
-
+  display: none;
+}
 
 .tap-target {
   color: black;
@@ -66,10 +62,8 @@ a.turts#menu {
   transition: transform 0.3s cubic-bezier(0.42, 0, 0.58, 1),
     opacity 0.3s cubic-bezier(0.42, 0, 0.58, 1),
     -webkit-transform 0.3s cubic-bezier(0.42, 0, 0.58, 1);
-     /* animation: spin 2s linear infinite; */
+  /* animation: spin 2s linear infinite; */
 }
-
-
 
 @keyframes spin {
   from {
@@ -89,7 +83,6 @@ body > div > div.tap-target > div::after {
   background-color: pink;
 }
 
-
 .tap-target-wave::before,
 .tap-target-wave::after {
   content: '';
@@ -103,21 +96,19 @@ body > div > div.tap-target > div::after {
   left: 105px;
 }
 
-body > div > div.tap-target-wave{
-    display: none;
-    
+body > div > div.tap-target-wave {
+  display: none;
 }
 
 .tap-target-wave.hidden {
   display: none;
 }
-.input-field>label {
-    color: black;
-    -webkit-text-stroke-width: 1px ;
-    -webkit-text-stroke-color:white ;
-    font-size: 20px;
+.yummy {
+  color: black;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  font-size: 20px;
 }
-
 
 .btn-floating {
   display: inline-block;
@@ -154,12 +145,7 @@ a.turts#menu > {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
-
-
-
-
 
 #star {
   width: 90%;
@@ -167,7 +153,29 @@ a.turts#menu > {
 }
 
 .input-field {
-    width: 100%;
-    margin-bottom: 25px;
+  width: 100%;
+  margin-bottom: 25px;
 }
 
+nav .input-field label {
+  top: -20px;
+  margin-bottom: 0% !important;
+  position: absolute;
+  top: -20%;
+  z-index: -50;
+}
+
+.custom-input{
+  -webkit-text-fill-color: rgb(30, 7, 44);
+}
+
+.label-fix{
+  -webkit-text-fill-color: black;
+}
+.cherry{
+ margin-right: 650px !important;
+}
+
+.validate{
+  border-bottom: orange;
+}

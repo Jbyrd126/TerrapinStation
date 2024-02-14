@@ -5,8 +5,16 @@ body,
 html {
   max-height: 100vh;
   margin: 0;
-  overflow-y: hidden;
+  
 }
+
+html::-webkit-scrollbar {
+  width: 0; /* Hide the scrollbar */
+
+  overflow-y: auto;
+}
+
+
 
 body {
   background: url('/images/deadhead.jpg');
@@ -166,7 +174,7 @@ nav .input-field label {
 }
 
 .custom-input{
-  -webkit-text-fill-color: rgb(30, 7, 44);
+  -webkit-text-fill-color: black;
 }
 
 .label-fix{
@@ -178,4 +186,19 @@ nav .input-field label {
 
 .validate{
   border-bottom: orange;
+}
+
+.scrollable-card {
+  height: 750px; /* Set your desired height */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.scrollable-card::-webkit-scrollbar {
+  width: 0; /* Hide the scrollbar */
+}
+
+.set-heading {
+  border-bottom: 1px solid white; /* Set the border color and style */
+  margin-bottom: 10px; /* Adjust the margin as needed */
+  display: inline-block;
 }

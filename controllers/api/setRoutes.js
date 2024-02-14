@@ -67,10 +67,16 @@ router.get('/venue/:venue_name', async (req, res) => {
   try {
     const venueName = req.params.venue_name;
     console.log(venueName);
-    const set = await Set.findAll(venueName);
+    const set = await Set.findAll({
+      where: {
+        venueName: venueName
+      }
+    });
+    
     console.log(`Data one with ID ${venueName} retrieved`);
     res.json(set);
   } catch (err) {
+    console.log(err);
     console.error(`There was an error retrieving data one with ID ${req.params.venue_name}`);
     res.status(500).json({ error: 'Internal Server Error' });
   }
@@ -80,10 +86,15 @@ router.get('/city/:city', async (req, res) => {
   try {
     const cityName = req.params.city;
     console.log(cityName);
-    const set = await Set.findAll(city);
+    const set = await Set.findAll({
+      where: {
+        city: cityName
+      }
+    });
     console.log(`Data one with ID ${cityName} retrieved`);
     res.json(set);
   } catch (err) {
+    console.log(err);
     console.error(`There was an error retrieving data one with ID ${req.params.city}`);
     res.status(500).json({ error: 'Internal Server Error' });
   }

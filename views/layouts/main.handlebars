@@ -1,6 +1,6 @@
 <html lang='en'>
   <head>
-     {{!-- <link href="./css/reset.css" rel="stylesheet"> --}}
+     <link href="./css/reset.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
@@ -15,84 +15,77 @@
   <body>
       <nav>
     <div class="nav-wrapper">
+      <button data-target="modal1" class="waves-effect waves-light btn modal-trigger">Sign Up</button>
+      {{#if logged_in}}
+      <a id='logout' class="waves-effect waves-light btn modal-trigger">Logout</a>
+      {{else}}
+      <button data-target="modal2" class="waves-effect waves-light btn modal-trigger">Login</button>
+      {{/if}}
 
-      <a class="skele waves-effect waves-light btn modal-trigger" href="#modal1">Sign Up</a>
+      {{!-- <a class="skele waves-effect waves-light btn modal-trigger" href="#modal1">Sign Up</a> --}}
 
   <!-- Modal Structure -->
-  <div id="modal1" class="modal signup-form">
+  <div id="modal1" class="modal signup-form ">
     <div class="modal-content">
       <h4 class="modal-text">Sign Up</h4>
       <div class='row' id="modal1">
   <form id='signup-form' class='col s12'>
     <div class='row'>
       <div class='input-field col s12'>
-        <input
-          placeholder='Placeholder'
-          id='name'
-          type='text'
-          class='validate'
-        />
-        <label for='name'> Name</label>
+        <input id='name' type='text' class='validate custom-input' />
+          <label for='name' class="label-fix"> Name</label>
       </div>
     </div>
     <div class='row'>
       <div class='input-field col s12'>
-        <input id='signup-password' type='password' class='validate' />
-        <label for='password'>Password</label>
+         <input id='signup-password' type='password' class='validate custom-input' />
+           <label class="label-fix" for='signup-password'>Password</label>
       </div>
     </div>
     <div class='row'>
       <div class='input-field col s12'>
-        <input id='signup-email' type='email' class='validate' />
-        <label for='signup-email'>Email</label>
+         <input id='signup-email' type='email'  class='validate custom-input' />
+           <label class="label-fix" for='signup-email'>Email</label>
       </div>
-
     </div>
-     <button type="submit" class="signup-form waves-effect waves-green btn-flat">Submit</button>
+     
   </form>
-</div>
+      </div>
     </div>
-    <div class="modal-footer">
-       <button class="modal-close waves-effect waves-green btn-flat">Close</button>
+    <div class="modal-footer ">
+      <button type="submit" class="cherry signup-form waves-effect waves-green btn-flat custom-input">Submit</button>
+       <button class="modal-close waves-effect waves-green btn-flat custom-input">Close</button>
      
     </div>
   </div>
-  {{#if logged_in}}
-        <a id='logout' class="skele waves-effect waves-light btn modal-trigger">Logout</a>
-  {{else}}
-       <a class="skele waves-effect waves-light btn modal-trigger" href="#modal2">Login</a>
-  {{/if}}
+ 
 
   <!-- Modal Structure -->
-  <div id="modal2" class="modal login-form">
-    <div class="modal-content">
+  <div id="modal2" class="modal login-form ">
+    <div class="modal-content ">
       <h4 class="modal-text">Login</h4>
-       
-      <div class='row' id="modal2">
+       <div class='row' id="modal2">
   <form id='login-form' class='col s12'>
     <div class='row'>
       <div class='input-field col s12'>
-        <input id="login-email"
-          placeholder='Placeholder'
-          type='text'
-          class='validate'
-        />
-        <label for='login-email'>Email</label>
+        <input id="login-email"  type='text' class='validate custom-input' />
+         <label class="label-fix" for='login-email'>Email</label>
       </div>
     </div>
     <div class='row'>
       <div class='input-field col s12'>
-         <label for='password'>Password</label>
-        <input id='login-password' type='password' />
-       
+        <input id='login-password' type='password'  class='custom-input'/>
+        <label class="label-fix" for='login-password'>Password</label>
+        
       </div>
     </div>
-      <button type="submit" class="login-form waves-effect waves-green btn-flat">Submit</button>
+      
   </form>
 </div>
     </div>
     <div class="modal-footer">
-      <a  id="login-submit" class="modal-close waves-effect waves-green btn-flat">Submit</a>
+      <button type="submit" class="cherry login-form waves-effect waves-green btn-flat custom-input">Submit</button>
+      <a  id="login-submit" class="modal-close waves-effect waves-green btn-flat custom-input">Close</a>
     </div>
   </div>
       <a href="#" class="brand-logo center">Wharf Rats</a>
@@ -124,7 +117,7 @@
       >
       
         <form id='featureForm' class="on-top">
-          <div class='input-field col s12' style='margin: 10px 0px 10px 0'>
+          <div class='yummy input-field col s12' style='margin: 10px 0px 10px 0'>
           
 
             <input id='input1' type='text' class='validate' />
@@ -216,8 +209,8 @@
  {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}} 
-    <script src="/js/home.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="/js/home.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="./js/login.js"></script>
   <script src="./js/signup.js"></script>
   </body>

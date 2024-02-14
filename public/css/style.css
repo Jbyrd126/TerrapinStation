@@ -179,3 +179,8 @@ nav .input-field label {
 .validate{
   border-bottom: orange;
 }
+
+.scrollable-content {
+  height: 400px; /* Adjust the height as needed */
+  overflow: auto;
+}

@@ -57,3 +57,4 @@ venueButton.addEventListener('click', function() {
    
     location.href = `/api/set/venue/${document.querySelector('#input1').value}`;
 });
+

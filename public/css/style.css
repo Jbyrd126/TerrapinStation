@@ -29,6 +29,9 @@ body {
 .modal-text {
   color: black;
 }
+.modal .modal-content {
+  padding: 12px;
+}
 
 a.turts#menu {
   top: 46vh !important;

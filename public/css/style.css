@@ -5,7 +5,6 @@ body,
 html {
   max-height: 100vh;
   margin: 0;
-  
 }
 
 html::-webkit-scrollbar {
@@ -14,14 +13,13 @@ html::-webkit-scrollbar {
   overflow-y: auto;
 }
 
-
-
 body {
   background: url('/images/deadhead.jpg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+
   max-height: 100vh;
+  background-attachment: fixed;
 }
 .skele {
   margin-left: 25px;
@@ -45,9 +43,8 @@ a.turts#menu {
   align-items: center;
 }
 
-.card{
+.card {
   left: 25vw !important;
-
 }
 .center-content {
   flex-direction: column;
@@ -57,7 +54,12 @@ a.turts#menu {
 }
 
 .transparent-card {
-  background-color: rgba(48, 63, 159, 1); /* Adjust the alpha value (0.7) for the desired transparency */
+  background-color: rgba(
+    48,
+    63,
+    159,
+    1
+  ); /* Adjust the alpha value (0.7) for the desired transparency */
 }
 
 .hidden {
@@ -110,9 +112,7 @@ body > div > div.tap-target > div::after {
   background-color: red;
 }
 
-
-body > div > div.tap-target > div{
-
+body > div > div.tap-target > div {
   position: absolute;
   top: 10px;
 }
@@ -199,18 +199,18 @@ nav .input-field label {
   z-index: -50;
 }
 
-.custom-input{
+.custom-input {
   -webkit-text-fill-color: black;
 }
 
-.label-fix{
+.label-fix {
   -webkit-text-fill-color: black;
 }
-.cherry{
- margin-right: 650px !important;
+.cherry {
+  margin-right: 650px !important;
 }
 
-.validate{
+.validate {
   border-bottom: orange;
 }
 

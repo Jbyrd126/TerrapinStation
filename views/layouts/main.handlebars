@@ -88,11 +88,7 @@
   </div>
       <a href="#" class="brand-logo center">Wharf Rats</a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
-        {{!-- <li><a href="sass.html">Sign Up</a></li>
-        <li><a href="badges.html">Login</a></li> --}}
-       
-        
-      </ul>
+       </ul>
     </div>
   </nav>
 
@@ -106,21 +102,21 @@
       <div
         class='tap-target-content'
         style='
-            inset: 0px 0px 0px 384px;
+            {{!-- inset: 0px 0px 0px 384px; --}}
             display: flex;
             flex-direction: column;
             width: 150px !important;
             z-index: -500000;
+            position:absolute;
+           
           '
       >
       
         <form id='featureForm' class="on-top">
           <div class='yummy input-field col s12' style='margin: 10px 0px 10px 0'>
-          
-
-            <input id='input1' type='text' class='validate  teal-text text-darken-3' />
+          <input id='input1' type='text' class='validate  teal-text text-darken-3' />
             <label for='input1' class='yummy'>Enter A Venue Here</label>
-            <button
+            <button id="search-venue"
               class='btn waves-effect waves-light submit-button'
               type='submit'
               name='action'
@@ -141,42 +137,12 @@
               style='margin-top: 10px'
             >
               Submit
-            </button>
-           
-          </div>
-          <div class='yummy input-field col s12' style='margin: 10px 0px 10px 0'>
-            <p id='menu' class=''><a id='menu' class=''></a></p>
-            <input id='input3' type='text' class='validate teal-text text-darken-3' />
-            <label for='input3' class='yummy'>Enter A State Here</label>
-               <button
-              class='btn waves-effect waves-light submit-button'
-              type='submit'
-              name='action'
-              style='margin-top: 10px'
-            >
-              Submit
-                </button>
-          
-          </div>
-          <div class=' yummy input-field col s12' style='margin: 10px 0px 10px 0'>
-          <p id='menu' class=''><a id='menu' class=''></a></p>
-            <input id='input4' type='text' class='validate teal-text text-darken-3' />
-            <label for='input4' class='yummy'>Enter A Song Title Here</label>
-               <button
-              class='btn waves-effect waves-light submit-button'
-              type='submit'
-              name='action'
-              style='margin-top: 10px'
-            >
-              Submit
-                </button>
-            
-     
+            </button> 
           </div>
           <div class='yummy input-field col s12' style='margin: 10px 0px 10px 0'>
            <p id='menu' class=''><a id='menu' class=''></a></p>
             <input id='input5' type='text' class='validate teal-text text-darken-3' />
-            <label for='input5' class='yummy'>Enter A Song Title Here</label>
+            <label for='input5' class='yummy'>Add A Show</label>
             <button
               class='btn waves-effect waves-light submit-button'
               type='submit'
@@ -190,7 +156,7 @@
           <div class='yummy input-field col s12' style='margin: 10px 0px 10px 0'>
             <p  id='menu' class=''><a id='menu' class=''></a></p>
             <input id='input6' type='text' class='validate teal-text text-darken-3' />
-            <label for='input6' class='yummy'>Look at this shit</label>
+            <label for='input6' class='yummy'>Update A Show</label>
             <button
               class='btn waves-effect waves-light submit-button'
               type='submit'

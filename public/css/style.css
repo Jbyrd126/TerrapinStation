@@ -103,7 +103,14 @@ body > div > div.tap-target > div {
 
 body > div > div.tap-target > div::after {
   animation: none;
-  background-color: pink;
+  background-color: red;
+}
+
+
+body > div > div.tap-target > div{
+
+  position: absolute;
+  top: 10px;
 }
 
 .tap-target-wave::before,

@@ -33,8 +33,7 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
-// /api/dataOne/:id
-// add a put API route here
+
 router.put('/:id', async (req, res) => {
   try {
     const setId = req.params.id;
@@ -47,16 +46,15 @@ router.put('/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
-// /api/dataOne/:id
-// add a get API route here
-router.get('/:city', async (req, res) => {
+
+router.get('/city/:city', async (req, res) => {
  const city= req.params.city
-  
   try {
     const setData = await Set.findAll({where:{city:city}});
     const sets = setData.map((set) =>set.get({ plain: true }));
-    console.log(`data retrieved`, sets);
-    res.render("sets", {sets})
+    console.log(`cmon man`, sets);
+    res.render("sets", {sets});
+    res.json(sets)
   } catch (err) {
     console.error(`There was an error retrieving data ${req.params.city}`);
     res.status(500).json({ error: 'Internal Server Error' });
@@ -64,57 +62,22 @@ router.get('/:city', async (req, res) => {
 });
 
 router.get('/venue/:venue_name', async (req, res) => {
-  try {
-    const venueName = req.params.venue_name;
-    console.log(venueName);
-    const set = await Set.findAll({
-      where: {
-        venueName: venueName
-      }
-    });
-    
-    console.log(`Data one with ID ${venueName} retrieved`);
-    res.json(set);
+  const venueName = req.params.venue_name;
+   try {
+    const setData = await Set.findAll({where:{venueName:venueName}});
+    const sets = setData.map((set) => set.get({ plain: true }));
+    console.log(`yo man`, sets);
+    res.render("sets", {sets});
+    // res.json(sets);
   } catch (err) {
-    console.log(err);
-    console.error(`There was an error retrieving data one with ID ${req.params.venue_name}`);
-    res.status(500).json({ error: 'Internal Server Error' });
-  }
-});
-
-router.get('/city/:city', async (req, res) => {
-  try {
-    const cityName = req.params.city;
-    console.log(cityName);
-    const set = await Set.findAll({
-      where: {
-        city: cityName
-      }
-    });
-    console.log(`Data one with ID ${cityName} retrieved`);
-    res.json(set);
-  } catch (err) {
-    console.log(err);
-    console.error(`There was an error retrieving data one with ID ${req.params.city}`);
+    console.error(`There was an error retrieving data for ${req.params.venue_name}`);
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
 
 
-// // Define route to handle search requests
-// app.post('/search', (req, res) => {
-//   // Retrieve search parameters from request body
-//   const { venue, city, state, songTitle } = req.body;
 
-//   // Perform search based on parameters
-//   // Your search logic here...
 
-//   // For demonstration, sending dummy response
-//   const searchResults = [];
-
-//   // Send search results as JSON response
-//   res.json(searchResults);
-// });
 
 
 

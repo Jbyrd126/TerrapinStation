@@ -54,7 +54,7 @@ router.get('/city/:city', async (req, res) => {
     const sets = setData.map((set) =>set.get({ plain: true }));
     console.log(`cmon man`, sets);
     res.render("sets", {sets});
-    res.json(sets)
+    // res.json(sets)
   } catch (err) {
     console.error(`There was an error retrieving data ${req.params.city}`);
     res.status(500).json({ error: 'Internal Server Error' });

@@ -28,12 +28,32 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+//   document.addEventListener('DOMContentLoaded', function() {
+//     var elems = document.querySelectorAll('.modal');
+//     var instances = M.Modal.init(elems);
+//   });
+// const button= document.getElementById('set-city');
+//   button.addEventListener('click', function() {
+//     location.href=`/api/set/city/${document.querySelector('#input2').value}`
+//   });
+
+
+
   document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.modal');
     var instances = M.Modal.init(elems);
-  });
-const cityButton= document.getElementById('set-city');
-  button.addEventListener('click', function() {
-    location.href=`/api/set/${document.querySelector('#input2').value}`
-  });
+});
 
+const cityButton = document.getElementById('set-city');
+cityButton.addEventListener('click', function() {
+    const inputValue = document.querySelector('#input2').value;
+    
+    location.href = `/api/set/city/${document.querySelector('#input2').value}`;
+});
+
+const venueButton = document.getElementById('search-venue');
+venueButton.addEventListener('click', function() {
+    const inputValue = document.querySelector('#input1').value;
+   
+    location.href = `/api/set/venue/${document.querySelector('#input1').value}`;
+});

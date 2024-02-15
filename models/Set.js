@@ -20,6 +20,10 @@ Set.init(
     tourName: {
       type: DataTypes.STRING,
     },
+    eventDate: {
+      type: DataTypes.DATE,
+    },
+    
     // Define a text field to store the array as a JSON string
   setOneSongs: {
     type: DataTypes.TEXT,

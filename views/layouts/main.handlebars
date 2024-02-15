@@ -46,16 +46,14 @@
            <label class="label-fix" for='signup-email'>Email</label>
       </div>
     </div>
-     
+     <div class="modal-footer">
+     <button type="submit" class="cherry signup-form waves-effect waves-green btn-flat custom-input">Submit</button>
+       <button class="modal-close waves-effect waves-green btn-flat custom-input">Close</button>
+    </div>
   </form>
       </div>
     </div>
-    <div class="modal-footer ">
-      <button type="submit" class="cherry signup-form waves-effect waves-green btn-flat custom-input">Submit</button>
-       <button class="modal-close waves-effect waves-green btn-flat custom-input">Close</button>
-     
     </div>
-  </div>
  
 
   <!-- Modal Structure -->
@@ -74,22 +72,20 @@
       <div class='input-field col s12'>
         <input id='login-password' type='password'  class='custom-input'/>
         <label class="label-fix" for='login-password'>Password</label>
-        
+       </div>
       </div>
     </div>
-      
+     <div class="modal-footer">
+          <button type="submit" class="cherry login-form waves-effect waves-green btn-flat custom-input">Submit</button>
+      <a  id="login-submit" class="modal-close waves-effect waves-green btn-flat custom-input">Close</a>
+     </div>
   </form>
 </div>
+      
     </div>
-    <div class="modal-footer">
-      <button type="submit" class="cherry login-form waves-effect waves-green btn-flat custom-input">Submit</button>
-      <a  id="login-submit" class="modal-close waves-effect waves-green btn-flat custom-input">Close</a>
-    </div>
-  </div>
-      <a href="#" class="brand-logo center">Wharf Rats</a>
+    <a href="#" class="brand-logo center">Wharf Rats</a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
        </ul>
-    </div>
   </nav>
 
     {{{body}}}
@@ -137,8 +133,25 @@
               style='margin-top: 10px'
             >
               Submit
-            </button> 
+            </button>
+           
           </div>
+      
+          {{!-- <div class=' yummy input-field col s12' style='margin: 10px 0px 10px 0'>
+          <p id='menu' class=''><a id='menu' class=''></a></p>
+            <input id='input4' type='text' class='validate teal-text text-darken-3' />
+            <label for='input4' class='yummy'>Enter A Song Title Here</label>
+               <button
+              class='btn waves-effect waves-light submit-button'
+              type='submit'
+              name='action'
+              style='margin-top: 10px'
+            >
+              Submit
+                </button>
+            
+     
+          </div> --}}
           <div class='yummy input-field col s12' style='margin: 10px 0px 10px 0'>
            <p id='menu' class=''><a id='menu' class=''></a></p>
             <input id='input5' type='text' class='validate teal-text text-darken-3' />

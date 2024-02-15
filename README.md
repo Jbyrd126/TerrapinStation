@@ -130,6 +130,9 @@ npm run start
 ## Usage
 
 Once the app is functional, screenshots will be added in this section.
+## Heroku Deployment Link 
+	
+https://wharf-rat-11de69f4736c.herokuapp.com/
 
 <!-- ROADMAP -->
 ## Google docs slide show

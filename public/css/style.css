@@ -20,6 +20,7 @@ body {
   background: url('/images/deadhead.jpg');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   max-height: 100vh;
 }
 .skele {

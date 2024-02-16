@@ -21,6 +21,7 @@ body {
   background-size: cover;
   background-position: center;
   max-height: 100vh;
+  background-attachment: fixed; 
 }
 .skele {
   margin-left: 25px;

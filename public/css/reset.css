@@ -46,14 +46,4 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/* End reset styles */
 
-
-
-/* now we use our normal styles */
-
-body { font-family: Georgia, serif; }
-
-p { color: blue; }
-
-h1, h2, h3, h4, h5, h6 { color: green; }
